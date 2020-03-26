@@ -1,0 +1,27 @@
+* {
+    margin: 5px;
+}
+
+body {
+    background-color: #242322;
+}
+
+.footer {
+    text-align: center;
+    color: beige;
+    bottom: 0;
+    background-color: black;
+}
+
+.crear {
+    color: cornsilk;
+}
+
+.imagen {
+    height: 200px;
+    width: 150px;
+}
+
+.sesion {
+    color: cornsilk;
+}
