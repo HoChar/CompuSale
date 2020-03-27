@@ -28,9 +28,9 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="scriptiniciarsesion.php"><b>Iniciar Sesion</b><span class="sr-only"></span></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="scriptcrearcuenta.php"><b>Crear cuenta</b></a>
-                    </li>
+                   <!-- <li class="nav-item">
+                        <a class="nav-link" href="scriptcrearcuenta.php"><b>Crear Cuenta</b></a>
+                    </li> -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><b>Productos</b></a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -40,11 +40,14 @@
                             <div class="dropdown-divider"></div>
                         </div>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="scriptapoyo.php"><b>Nuestro Apoyo</b></a>
+                    </li>
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
+                <!--<form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
                     <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Busqueda</button>
-                </form>
+                </form> -->
             </div>
         </nav>
     </div>

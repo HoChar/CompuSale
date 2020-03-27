@@ -46,7 +46,7 @@
           <input type="text" class="form-control" id="direccion" name="direccion">
         </div>
         
-        <button type="submit" class="btn btn-primary">Agregar</button>
+        <button type="submit" class="btn btn-primary">Confirmar Compra</button>
       </form>
 
     </div>
