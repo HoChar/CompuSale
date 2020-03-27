@@ -6,8 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>hola</h1>
-    <div class="row container">
             <?php 
                 $contador = 0;
                 
@@ -18,7 +16,6 @@
                     
                     $contador++;
             ?>
-
                     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
@@ -39,10 +36,10 @@
                             </div>
                         </div>
                     </div> 
-                    <?php 
-                }
-            ?> 
-    </div>
+                <?php 
+                    }
+                ?> 
+
 
 </body>
 </html>
