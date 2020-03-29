@@ -46,9 +46,7 @@
           <input type="text" class="form-control" id="direccion" name="direccion">
         </div>
         
-        
-        <a  href="scriptfactura.php" class="btn btn-dark">Confirmar Comprar</a>
-      </form>
+         <a  href="scriptfactura.php" class="btn btn-dark">Confirmar Comprar</a>
 
     </div>
 

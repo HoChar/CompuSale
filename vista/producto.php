@@ -6,12 +6,12 @@
     <title>Document</title>
 </head>
 <body>
+<h1>hola</h1>
             <?php 
                 $contador = 0;
-                
                 include "modelo/conexionProducto.class.php";
-                $sql = "SELECT * FROM productos WHERE pro_id = $contador";
-                $result = mysqli_query($conexion, "SELECT * FROM productos WHERE pro_id = $contador");
+                $sql = "SELECT * FROM productos";
+                $result = mysqli_query($conexion, $sql);
                 while ($obtener = mysqli_fetch_array($result)){
                     
                     $contador++;
