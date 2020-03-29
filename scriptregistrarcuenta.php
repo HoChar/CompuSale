@@ -8,7 +8,7 @@
 		$usuario->identificacion = $_POST["identificacion"];
 		$usuario->nombre = $_POST["nombre"];
 		$usuario->telefono = $_POST["telefono"];
-		$usuario->f_nacimiento = $_POST["fechaNacimiento"];
+		$usuario->f_nacimiento = $_POST["f_nacimiento"];
 		$usuario->correo = $_POST["correo"];
 		$usuario->ciudad = $_POST["ciudad"];
 		$usuario->direccion = $_POST["direccion"];
@@ -25,5 +25,7 @@
 	}
 	else{
 		echo $resultadoConexion;
-    }
- ?>
+	}
+	
+	
+ ?>	

@@ -31,7 +31,7 @@
                                     <p class="card-text"><b>Precio: </b>$<?php echo $obtener['pro_precio']?></p>
                                 </div>
                                 <div class="modal-footer">
-                                    <a href="#" class="btn btn-dark">Comprar</a>
+                                    <a href="#" class="btn btn-dark">Realizar Compra</a>
                                 </div>
                             </div>
                         </div>
