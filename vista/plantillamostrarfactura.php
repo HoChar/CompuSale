@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="vista/Bootstrap/bootstrap.min.css">
     <link rel=StyleSheet href="estilo.css" type="text/css" media=screen>
     
-    <title>Serviteca</title>
+    <title>Compusale</title>
   </head>
-  <body id="hola">
+  <body>
     <div class="container">
 
       <?php require_once "Vista/plantillamenu.php";?>

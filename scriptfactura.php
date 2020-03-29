@@ -1,6 +1,6 @@
 <?php 
 	
-	require_once "modelo/conexionFactura.class.php";
+	require_once "modelo/conexionfactura.class.php";
 	$conexProducto = new ConexionProducto();
 	$resultadoConexion = $conexProducto->abrir();
 	if($resultadoConexion > 0){
