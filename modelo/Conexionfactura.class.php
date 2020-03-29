@@ -20,7 +20,7 @@
 		}
 
         public function obtenerProductos(){
-			$consulta = $this->conexion->prepare("SELECT pro_nombre,pro_precio FROM usuarios");
+			$consulta = $this->conexion->prepare("SELECT * FROM usuarios");
 			$consulta->setFetchMode(PDO::FETCH_OBJ);
 			$consulta->execute();
 			return $consulta->fetchAll();

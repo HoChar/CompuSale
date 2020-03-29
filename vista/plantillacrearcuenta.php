@@ -45,7 +45,7 @@
           <label for="correo">Direccion</label>
           <input type="text" class="form-control" id="direccion" name="direccion">
         </div>
-        
+        <button type="submit" class="btn btn-primary">Agregar</button>
          <a  href="scriptfactura.php" class="btn btn-dark">Confirmar Comprar</a>
 
     </div>
