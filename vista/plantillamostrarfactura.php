@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html>
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -18,7 +18,7 @@
         
       <?php foreach ($productos as $producto) { ?>
       Gracias por comprar <?= $producto->pro_nombre ?> que tiene un valor de <?= $producto->pro_precio ?>
-
+      <?php } ?>
   </div>
   </body>
 
