@@ -14,11 +14,12 @@
   <body>
     <div class="container">
 
-      <?php require_once "Vista/plantillamenu.php";?>
+    <?php require_once "Vista/plantillamenu.php";?>
         
       <?php foreach ($productos as $producto) { ?>
       Gracias por comprar <?= $producto->pro_nombre ?> que tiene un valor de <?= $producto->pro_precio ?>
 
   </div>
+  </body>
 
 </html>
