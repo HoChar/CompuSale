@@ -7,11 +7,11 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="vista/Bootstrap/bootstrap.min.css">
-
+    <link rel=StyleSheet href="estilo.css" type="text/css" media=screen>
     
     <title>Serviteca</title>
   </head>
-  <body>
+  <body id="hola">
     <div class="container">
 
       <?php require_once "Vista/plantillamenu.php";?>

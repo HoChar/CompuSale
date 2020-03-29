@@ -1,10 +1,10 @@
 <?php 
 	
 	require_once "modelo/conexionFactura.class.php";
-	$conexCliente = new ConexionProducto();
-	$resultadoConexion = $conexCliente->abrir();
+	$conexProducto = new ConexionProducto();
+	$resultadoConexion = $conexProducto->abrir();
 	if($resultadoConexion > 0){
-		$clientes = $conexCliente->obtenerProductos();
+		$productos = $conexProducto->obtenerProductos();
 	}
 	else{
 		echo $resultadoConexion;
