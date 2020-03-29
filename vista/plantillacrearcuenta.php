@@ -46,7 +46,7 @@
           <input type="text" class="form-control" id="direccion" name="direccion">
         </div>
         
-        <button type="submit" class="btn btn-primary">Confirmar Compra</button>
+        <a type="submit" href="" class="btn btn-primary">Confirmar Compra</a>
       </form>
 
     </div>
