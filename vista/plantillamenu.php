@@ -34,7 +34,6 @@
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><b>Productos</b></a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="#">Agregar</a>
-                            <div class="dropdown-divider"></div>
                         </div>
                     </li>
                     <li class="nav-item">

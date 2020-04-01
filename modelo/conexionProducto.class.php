@@ -32,6 +32,15 @@
 			$consulta->execute();
 			return $consulta->fetchAll();
 		}
+
+		public function obtenerProductoId($id){
+			$consulta = $this->conexion->prepare("SELECT * FROM productos WHERE pro_id =?");
+			$consulta->bindParam(1, $id);
+			$consulta->setFetchMode(PDO::FETCH_OBJ);
+			$consulta->execute();
+			$productos = $consulta->fetchAll();
+			return $productos[0];
+		}
     }
     
 ?>
