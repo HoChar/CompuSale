@@ -14,11 +14,7 @@
   <body>
     <div class="container">
 
-<<<<<<< HEAD
     <?php require_once "Vista/plantillamenu.php";?>
-=======
-      <?php require_once "vista/plantillamenu.php";?>
->>>>>>> 59c69606ff11cd9432b0dab6337d79cd1bcb52e4
         
       <table class="table table-striped table-dark">
         <thead>
@@ -42,10 +38,7 @@
       </table>
 
   </div>
-<<<<<<< HEAD
   </body>
-=======
->>>>>>> 59c69606ff11cd9432b0dab6337d79cd1bcb52e4
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

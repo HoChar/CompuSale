@@ -37,7 +37,7 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="scriptapoyo.php"><b>Nuestro Apoyo</b></a>
+                        <a class="nav-link" href="scriptfactura.php"><b>Nuestro Apoyo</b></a>
                     </li>
                 </ul>
                 <!--<form class="form-inline my-2 my-lg-0">
