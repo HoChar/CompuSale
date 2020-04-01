@@ -25,7 +25,7 @@
                             <h5 class="card-title"> <?= $producto->pro_nombre ?></h5>
                             <p class="card-text"><?= $producto->pro_descripcion ?></p>
                             <h5 class="card-title"> $<?= $producto->pro_precio ?></h5>
-                            <a href="" class="btn btn-dark">Comprar</a>
+                            <a href="scriptcrearcuenta.php" class="btn btn-dark">Comprar</a>
                         </div>
                     </div>
                 </div>
