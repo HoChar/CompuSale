@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-03-2020 a las 23:40:14
+-- Tiempo de generación: 01-04-2020 a las 19:32:38
 -- Versión del servidor: 10.4.8-MariaDB
 -- Versión de PHP: 7.3.11
 
@@ -19,49 +19,8 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `proyecto`
+-- Base de datos: `proy`
 --
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `categorias`
---
-
-CREATE TABLE `categorias` (
-  `cat_id` varchar(11) NOT NULL,
-  `cat_tipo` varchar(15) DEFAULT NULL,
-  `cat_marca` varchar(20) DEFAULT NULL,
-  `cat_modelo` varchar(20) DEFAULT NULL,
-  `pro_id` varchar(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `compras`
---
-
-CREATE TABLE `compras` (
-  `com_id` varchar(10) NOT NULL,
-  `pro_id` varchar(10) DEFAULT NULL,
-  `fac_id` varchar(10) DEFAULT NULL,
-  `com_cantidad` int(11) DEFAULT NULL,
-  `com_valor` int(11) DEFAULT NULL,
-  `com_subtotal` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `envios`
---
-
-CREATE TABLE `envios` (
-  `env_id` varchar(11) NOT NULL,
-  `fac_id` varchar(11) DEFAULT NULL,
-  `tra_nit` varchar(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -70,23 +29,11 @@ CREATE TABLE `envios` (
 --
 
 CREATE TABLE `facturas` (
-  `fac_id` varchar(11) NOT NULL,
+  `fac_id` int(11) NOT NULL,
   `fac_fechaCompra` date DEFAULT NULL,
   `pro_id` varchar(11) DEFAULT NULL,
   `usu_id` varchar(11) DEFAULT NULL,
   `fac_precioTotal` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `logins`
---
-
-CREATE TABLE `logins` (
-  `log_usurio` varchar(11) NOT NULL,
-  `log_contraseña` varchar(30) DEFAULT NULL,
-  `usu_id` varchar(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -131,20 +78,6 @@ INSERT INTO `productos` (`pro_id`, `pro_nombre`, `pro_descripcion`, `pro_precio`
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `transportadoras`
---
-
-CREATE TABLE `transportadoras` (
-  `tra_nit` varchar(11) NOT NULL,
-  `tra_telefono` varchar(11) DEFAULT NULL,
-  `tra_nombre` varchar(30) DEFAULT NULL,
-  `tra_ciudad` varchar(15) DEFAULT NULL,
-  `tra_direccion` varchar(30) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
 -- Estructura de tabla para la tabla `usuarios`
 --
 
@@ -159,38 +92,8 @@ CREATE TABLE `usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `usuarios`
---
-
-INSERT INTO `usuarios` (`usu_id`, `usu_nombre`, `usu_telefono`, `usu_fechaNacimiento`, `usu_tipo`, `usu_ciudad`, `usu_direccion`) VALUES
-('', 'julian ', '3105041184', NULL, 0, 'manila', 'mi casa');
-
---
 -- Índices para tablas volcadas
 --
-
---
--- Indices de la tabla `categorias`
---
-ALTER TABLE `categorias`
-  ADD PRIMARY KEY (`cat_id`),
-  ADD KEY `cat_pro` (`pro_id`);
-
---
--- Indices de la tabla `compras`
---
-ALTER TABLE `compras`
-  ADD PRIMARY KEY (`com_id`),
-  ADD KEY `pro_id` (`pro_id`),
-  ADD KEY `fac_id` (`fac_id`);
-
---
--- Indices de la tabla `envios`
---
-ALTER TABLE `envios`
-  ADD PRIMARY KEY (`env_id`),
-  ADD KEY `env_fac` (`fac_id`),
-  ADD KEY `Fk_tra_nit` (`tra_nit`);
 
 --
 -- Indices de la tabla `facturas`
@@ -201,23 +104,10 @@ ALTER TABLE `facturas`
   ADD KEY `fac_pro` (`pro_id`);
 
 --
--- Indices de la tabla `logins`
---
-ALTER TABLE `logins`
-  ADD PRIMARY KEY (`log_usurio`),
-  ADD KEY `log_usu` (`usu_id`);
-
---
 -- Indices de la tabla `productos`
 --
 ALTER TABLE `productos`
   ADD PRIMARY KEY (`pro_id`);
-
---
--- Indices de la tabla `transportadoras`
---
-ALTER TABLE `transportadoras`
-  ADD PRIMARY KEY (`tra_nit`);
 
 --
 -- Indices de la tabla `usuarios`
@@ -226,40 +116,25 @@ ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`usu_id`);
 
 --
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `facturas`
+--
+ALTER TABLE `facturas`
+  MODIFY `fac_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- Restricciones para tablas volcadas
 --
-
---
--- Filtros para la tabla `categorias`
---
-ALTER TABLE `categorias`
-  ADD CONSTRAINT `cat_pro` FOREIGN KEY (`pro_id`) REFERENCES `productos` (`pro_id`);
-
---
--- Filtros para la tabla `compras`
---
-ALTER TABLE `compras`
-  ADD CONSTRAINT `compras_ibfk_1` FOREIGN KEY (`pro_id`) REFERENCES `productos` (`pro_id`),
-  ADD CONSTRAINT `compras_ibfk_2` FOREIGN KEY (`fac_id`) REFERENCES `facturas` (`fac_id`);
-
---
--- Filtros para la tabla `envios`
---
-ALTER TABLE `envios`
-  ADD CONSTRAINT `Fk_tra_nit` FOREIGN KEY (`tra_nit`) REFERENCES `transportadoras` (`tra_nit`),
-  ADD CONSTRAINT `env_fac` FOREIGN KEY (`fac_id`) REFERENCES `facturas` (`fac_id`);
 
 --
 -- Filtros para la tabla `facturas`
 --
 ALTER TABLE `facturas`
-  ADD CONSTRAINT `fac_usu` FOREIGN KEY (`usu_id`) REFERENCES `usuarios` (`usu_id`);
-
---
--- Filtros para la tabla `logins`
---
-ALTER TABLE `logins`
-  ADD CONSTRAINT `log_usu` FOREIGN KEY (`usu_id`) REFERENCES `usuarios` (`usu_id`);
+  ADD CONSTRAINT `fac_usu` FOREIGN KEY (`usu_id`) REFERENCES `usuarios` (`usu_id`),
+  ADD CONSTRAINT `pro_id` FOREIGN KEY (`pro_id`) REFERENCES `productos` (`pro_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
