@@ -3,43 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CompuSale</title>
+
+    <!-- Bootstrap CSS -->
+    <?php include "css.php" ?>
+
+    <link rel=StyleSheet href="estilo.css" type="text/css" media=screen>
+    
 </head>
 <body>
-<h1>hola</h1>
-            <?php 
-                $contador = 0;
-                include "modelo/conexionProducto.class.php";
-                $sql = "SELECT * FROM productos";
-                $result = mysqli_query($conexion, $sql);
-                while ($obtener = mysqli_fetch_array($result)){
-                    
-                    $contador++;
-            ?>
-                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel"><?php echo $obtener['pro_nombre']?></h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <img class="card-img-top" style="width: 18rem" src="img/imagenes/<?php echo $contador?>.jpg">
-                                    <p class="card-text"><?php echo $obtener['pro_descripcion']?></p>
-                                    <p class="card-text"><b>Precio: </b>$<?php echo $obtener['pro_precio']?></p>
-                                </div>
-                                <div class="modal-footer">
-                                    <a href="#" class="btn btn-dark">Realizar Compra</a>
-                                </div>
-                            </div>
+    <?php require_once "vista/plantillamenu.php";?>
+    <div class="container">
+        <div class="row container">
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img src="img/imagenes/<?= $producto->pro_id ?>.jpg" class="card-img" alt="">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title"> <?= $producto->pro_nombre ?></h5>
+                            <p class="card-text"><?= $producto->pro_descripcion ?></p>
+                            <h5 class="card-title"> $<?= $producto->pro_precio ?></h5>
+                            <a href="" class="btn btn-dark">Comprar</a>
                         </div>
-                    </div> 
-                <?php 
-                    }
-                ?> 
-
-
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?php include "footer.php"?>
+    </div>
+    <?php include "JavaScript.php" ?>
 </body>
 </html>
