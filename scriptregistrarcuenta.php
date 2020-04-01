@@ -14,7 +14,6 @@
 		$usuario->direccion = $_POST["direccion"];
         $filas = $conexUsuario->insertarUsuario($usuario);
         
-        // despues de agregar los primeros, hacer consulta para agregar los segundos
     
 		if($filas > 0){
 		header("location: index.php?accion=1");

@@ -1,10 +1,10 @@
 <?php 
 	
-	require_once "modelo/Conexionfactura.class.php";
+	require_once "modelo/ConexionFactura.class.php";
 	$conexFactura = new ConexionFactura();
 	$resultadoConexion = $conexFactura->abrir();
 	if($resultadoConexion > 0){
-		$facturas = $conexFactura->obtenerFacturas();
+		$facturas = $conexFactura->obtenerFacturaXidentificacion($identificacion);
 	}
 	else{
 		echo $resultadoConexion;
