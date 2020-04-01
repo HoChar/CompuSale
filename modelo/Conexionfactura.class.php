@@ -27,7 +27,9 @@
 		}
 
         public function obtenerFActuraXidentificacion($identificacion){
-			$consulta = $this->conexion->prepare("SELECT * FROM facturas where fac_id=?");
+			$consulta = $this->conexion->prepare("SELECT fac_id.facturas,fac_fechaCompra.facturas,pro_id.productos,usu_id.usuarios
+			FROM usuarios join facturas on  
+			where fac_id=?");
 			$consulta->bindParam(1,$identificacion);
 			$consulta->setFetchMode(PDO::FETCH_OBJ);
 			$consulta->execute();

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-04-2020 a las 18:11:05
+-- Tiempo de generación: 01-04-2020 a las 19:32:38
 -- Versión del servidor: 10.4.8-MariaDB
 -- Versión de PHP: 7.3.11
 
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `facturas` (
-  `fac_id` varchar(11) NOT NULL,
+  `fac_id` int(11) NOT NULL,
   `fac_fechaCompra` date DEFAULT NULL,
   `pro_id` varchar(11) DEFAULT NULL,
   `usu_id` varchar(11) DEFAULT NULL,
@@ -116,6 +116,16 @@ ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`usu_id`);
 
 --
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `facturas`
+--
+ALTER TABLE `facturas`
+  MODIFY `fac_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- Restricciones para tablas volcadas
 --
 
@@ -123,7 +133,8 @@ ALTER TABLE `usuarios`
 -- Filtros para la tabla `facturas`
 --
 ALTER TABLE `facturas`
-  ADD CONSTRAINT `fac_usu` FOREIGN KEY (`usu_id`) REFERENCES `usuarios` (`usu_id`);
+  ADD CONSTRAINT `fac_usu` FOREIGN KEY (`usu_id`) REFERENCES `usuarios` (`usu_id`),
+  ADD CONSTRAINT `pro_id` FOREIGN KEY (`pro_id`) REFERENCES `productos` (`pro_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
