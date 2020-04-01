@@ -12,7 +12,7 @@
 <body>
     <div class="container">
         <?php require_once "vista/plantillamenu.php";?>
-        <?php require_once "vista/plantillainicial.php"; ?>
+        <?php require_once "scriptmostrarproducto.php"; ?>
     </div>
     <div class="container footer">
         <?php include "footer.php"?>
