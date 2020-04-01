@@ -1,6 +1,6 @@
 <?php
 
-	class ConexionProducto{
+	class ConexionFactura{
 		private $conexion;
 		
 		public function abrir(){
@@ -19,10 +19,19 @@
 			$this-> $conexion = null; 
 		}
 
-        public function obtenerProductos(){
-			$consulta = $this->conexion->prepare("SELECT * FROM usuarios");
+		public function obtenerFacturas(){
+			$consulta = $this->conexion->prepare("SELECT * FROM facturas");
 			$consulta->setFetchMode(PDO::FETCH_OBJ);
 			$consulta->execute();
 			return $consulta->fetchAll();
+		}
+
+        public function obtenerFActuraXidentificacion($identificacion){
+			$consulta = $this->conexion->prepare("SELECT * FROM facturas where fac_id=?");
+			$consulta->bindParam(1,$identificacion);
+			$consulta->setFetchMode(PDO::FETCH_OBJ);
+			$consulta->execute();
+			$facturas= $consulta->fetchAll();
+			return $facturas[0];
 		}
     }
