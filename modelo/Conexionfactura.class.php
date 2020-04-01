@@ -16,7 +16,7 @@
 		}
 
 		public function cerrar(){
-			$this-> $conexion = null; 
+			$this->conexion = null; 
 		}
 
 		public function obtenerFacturas(){
