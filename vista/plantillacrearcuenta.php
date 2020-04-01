@@ -43,7 +43,7 @@
         </div>
         <div class="form-group">
           <label for="correo">Direccion</label>
-          <button type="text" class="form-control" id="direccion" name="direccion">
+          <input type="text" class="form-control" id="direccion" name="direccion">
         </div>
         
          <button type="submit" href="scriptfactura.php" class="btn btn-dark" >Confirmar Comprar</button>
