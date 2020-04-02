@@ -18,13 +18,13 @@
             <div class="card mb-3" style="max-width: 540px;">
                 <div class="row no-gutters">
                     <div class="col-md-4">
-                        <img src="img/imagenes/<?= $producto->pro_id ?>.jpg" class="card-img" alt="">
+                        <img src="img/imagenes/<?= $_GET["id"] ?>.jpg" class="card-img" alt="">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
                             <h5 class="card-title"> <?= $producto->pro_nombre ?></h5>
                             <p class="card-text"><?= $producto->pro_descripcion ?></p>
-                            <h5 class="card-title"> $<?= $producto->pro_precio ?></h5>
+                            <h5 class="card-title"> <?= $producto->pro_precio ?></h5>
                             <a href="scriptcrearcuenta.php?id=<?= $producto->pro_id ?>&precio=<?= $producto->pro_precio ?>" class="btn btn-dark">Comprar</a>
                         </div>
                     </div>

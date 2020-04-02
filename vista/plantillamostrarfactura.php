@@ -33,7 +33,7 @@ $radicado= rand($min=1000000,$max=9999999);
             <th scope="col">Precio</th>
             <th scope="col">ID_compra</th>
             <th scope="col">Recuerde</th>
-            <th scope="col"><a href="vista/plantillaprincipal.php"></a>Aceptar</th>
+            <th scope="col"><a href=""></a>Aceptar</th>
           </tr>
         </thead>
           <tr>

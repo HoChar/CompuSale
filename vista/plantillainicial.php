@@ -25,7 +25,7 @@
                 <img class="card-img-top" style="width: 18rem" src="img/imagenes/<?php echo $contador?>.jpg">
                     <div class="card-body">
                         <h5 class="card-title"><?= $producto->pro_nombre ?></h5>
-                            <a class="nav-link btn btn-dark" href="scriptproducto.phppro_?id=<?= $producto->pro_id ?> "><b>Ver Mas</b></a>
+                            <a class="nav-link btn btn-dark" href="scriptproducto.php?id=<?= $producto->pro_id ?>"><b>Ver Mas</b></a>
                     </div> 
             </div>
             <?php 
