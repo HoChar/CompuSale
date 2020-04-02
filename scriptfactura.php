@@ -1,15 +1,10 @@
 <?php 
-	
-	require_once "modelo/ConexionFactura.class.php";
-	$conexFactura = new ConexionFactura();
-	$resultadoConexion = $conexFactura->abrir();
-	if($resultadoConexion > 0){
-		$facturas = $conexFactura->obtenerFacturaXidentificacion($identificacion);
-	}
-	else{
-		echo $resultadoConexion;
-	}
+	$id=$_GET["id"];
+	$iden=$_GET["iden"];
+	$precio=$_GET["precio"];
+	$nombre=$_GET["nombre"];
 	require_once "vista/plantillamostrarfactura.php";
+	
 
 
  ?>
