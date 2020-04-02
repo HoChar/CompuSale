@@ -13,10 +13,8 @@
 		$usuario->ciudad = $_POST["ciudad"];
 		$usuario->direccion = $_POST["direccion"];
         $filas = $conexUsuario->insertarUsuario($usuario);
-        
-    
 		if($filas > 0){
-		header("location: index.php?accion=1");
+		header("location:scriptfactura.php");
 		}
 		else{
 		header("location: index.php?accion=2");
@@ -25,6 +23,4 @@
 	else{
 		echo $resultadoConexion;
 	}
-	
-	
  ?>	
