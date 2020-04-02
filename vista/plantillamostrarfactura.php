@@ -1,3 +1,11 @@
+<?php 
+$nombre=$_GET["nombre"];
+$iden=$_GET["iden"];
+$id=$_GET["id"];
+$precio=$_GET["precio"];
+$radicado= rand($min=1000000,$max=9999999);
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -6,37 +14,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="vista/Bootstrap/css/bootstrap.min.css">
+   
+    <?php include "css.php" ?>
+    <link rel=StyleSheet href="estilo.css" type="text/css" media=screen>
 
-    
-    <title>Compusale</title>
+    <title>CompuSale</title>
   </head>
-  <body>
+  <body class="crear">
     <div class="container">
-
-    <?php require_once "Vista/plantillamenu.php";?>
+      <?php require_once "Vista/plantillamenu.php";?>
         
       <table class="table table-striped table-dark">
         <thead>
           <tr>
-            <th scope="col">Iden_factura</th>
-            <th scope="col">Fechacompra</th>
-            <th scope="col">pro_id</th>
-            <th scope="col">usu_id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Identificacion</th>
+            <th scope="col">ID_producto</th>
+            <th scope="col">Precio</th>
+            <th scope="col">ID_compra</th>
+            <th scope="col">Recuerde</th>
+            <th scope="col"><a href="vista/plantillaprincipal.php"></a>Aceptar</th>
           </tr>
         </thead>
-        <tbody>
-          <?php foreach ($facturas as $factura) { ?>
-            <tr>
-              <td><?= $factura->fac_id ?></th>
-              <td><?= $factura->fac_fechaCompra ?></td>
-              <td><?= $factura->pro_id ?></td>
-              <td><?= $factura->usu_id ?></td>
-            </tr>
-          <?php } ?>
-        </tbody>
+          <tr>
+              <td><?= $nombre ?></th>
+              <td><?= $iden ?></td>
+              <td><?= $id ?></td>
+              <td><?= $precio ?></td>
+              <td><i><?= $radicado ?></i></td>
+              <td><p><i><b>Debe tomar nota del numero de radicado(ID_compra) ya que con este <br>
+            podra resolver cualquier inquietud que tenga respecto a las fechas estipuladas <br>
+          de entrega y/o el producto que adquirio</b></i></p></td>
+            </tr> <br><br>
+            
       </table>
-
   </div>
   </body>
 
