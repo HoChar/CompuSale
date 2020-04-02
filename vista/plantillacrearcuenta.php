@@ -16,7 +16,7 @@
     <div class="container">
         
       <?php require_once "vista/plantillamenu.php";?>
-      <form action="scriptregistrarcuenta.php" method="post">
+      <form action="scriptregistrarcuenta.php?id=<?= $id ?>&precio=<?= $precio ?>" method="post">
         <div class="form-group">
           <label for="identificacion">Identificación</label>
           <input type="number" class="form-control" id="identificacion" name= "identificacion">
@@ -46,7 +46,7 @@
           <input type="text" class="form-control" id="direccion" name="direccion">
         </div>
         
-         <button type="submit"  class="btn btn-dark" >Confirmar Comprar</button>
+         <button type="submit" class="btn btn-dark" >Confirmar Comprar</button>
       </form>
     </div>
 
