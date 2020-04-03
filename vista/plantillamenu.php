@@ -30,11 +30,8 @@
                    <!-- <li class="nav-item">
                         <a class="nav-link" href="scriptcrearcuenta.php"><b>Crear Cuenta</b></a>
                     </li> -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><b>Productos</b></a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Agregar</a>
-                        </div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="scriptseguridad.php"><b>Confianza</b></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="scriptapoyo.php"><b>Nuestro Apoyo</b></a>
